@@ -1,0 +1,71 @@
+# Задание 1
+a = ['admin', 'operator']
+b = input("Введите имя нового пользователя: ")
+a.append(b)
+print(a)
+
+# Задание 2
+a = ['root', 'security']
+b = input("Введите имя администратора: ")
+a.insert(0, b)
+print(a)
+
+# Задание 3
+a = ['alice', 'bob', 'charlie']
+b = input("Введите имя пользователя для удаления: ")
+a.remove(b)
+print(a)
+
+# Задание 4
+a = ['Access granted', 'Login failed', 'Connection lost']
+b = a.pop()
+print("Последняя запись:", b)
+print("Оставшиеся логи:", a)
+
+# Задание 5
+a = ['ok', 'error', 'ok', 'error', 'error']
+print("Количество ошибок входа:", a.count('error'))
+
+# Задание 6
+a = ['Access ok', 'Breach detected', 'System reboot', 'Breach detected']
+print("Первое обнаружение вторжения на позиции:", a.index('Breach detected'))
+
+# Задание 7
+a = [3, 1, 2, 3, 1, 2]
+a.sort()
+print(a)
+
+# Задание 8
+a = ['2025-10-01', '2025-10-02', '2025-10-03']
+a.reverse()
+print(a)
+
+# Задание 9
+a = ["alert", "spam", "login", "error", "spam", "alert"]
+while "spam" in a:
+    a.remove("spam")
+a.append("END_LOG")
+a.reverse()
+print("Журнал после очистки:", a)
+print("Количество 'alert':", a.count("alert"))
+
+# Задание 10
+n = ['192.168.0.1', '192.168.0.2', '192.168.0.3', '192.168.0.4', '192.168.0.5']
+o = input("Введите IP для удаления: ")
+p = input("Введите новый IP: ")
+n.remove(o)
+n.insert(2, p)
+n.sort()
+print("Обновлённый белый список:", n)
+print("Индекс нового IP:", n.index(p))
+
+# Задание 11
+a = ['ok', 'fail', 'fail', 'ok', 'fail']
+b = a.count('fail')
+print("Количество неудачных входов:", b)
+while 'fail' in a:
+    a.remove('fail')
+a.append('audit_completed')
+a.reverse()
+print("Итоговый список:", a)
+print("Первый индекс 'ok':", a.index('ok'))
